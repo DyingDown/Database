@@ -1,0 +1,4 @@
+D:/Study/Code/Database/Database/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Study/Code/Database/Database/cmake-build-debug/CMakeFiles/test_texicalAnalyzer.dir
+D:/Study/Code/Database/Database/cmake-build-debug/CMakeFiles/Database.dir
+D:/Study/Code/Database/Database/cmake-build-debug/CMakeFiles/rebuild_cache.dir

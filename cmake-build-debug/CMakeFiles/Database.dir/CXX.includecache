@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Study/Code/Database/Database/InputBuffer.cpp
+InputBuffer.h
+D:/Study/Code/Database/Database/InputBuffer.h
+iostream
+-
+
+D:/Study/Code/Database/Database/InputBuffer.h
+string
+-
+
