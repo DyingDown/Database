@@ -1,0 +1,35 @@
+//
+// Created by o_oya on 2021/10/17.
+//
+
+#include "SQLValue.h"
+#include "Token.h"
+#include "TokenType.h"
+
+SQLValue::SQLValue(Token val, types type) {
+    if(val.type == TokenType::INT) {
+        value = stoi(val.value);
+        valueType = types::INT;
+    } else if(val.type == TokenType::FLOAT) {
+        value = stof(val.value);
+        valueType = types::FLOAT;
+    } else if(val.type == TokenType::STRING){
+        value = val.value;
+        valueType = types::STRING;
+    } else if(val.type == TokenType::ID){
+        value = val.value;
+        valueType = types::COLUMN;
+    }
+}
+
+int SQLValue::getInt() {
+    return std::get<int>(value);
+}
+
+double SQLValue::getFloat() {
+    return std::get<double>(value);
+}
+
+std::string SQLValue::getString() {
+    return std::get<std::string>(value);
+}

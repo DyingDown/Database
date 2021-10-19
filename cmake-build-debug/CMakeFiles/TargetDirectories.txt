@@ -1,4 +1,12 @@
 D:/Study/Code/Database/Database/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Study/Code/Database/Database/cmake-build-debug/CMakeFiles/test_texicalAnalyzer.dir
 D:/Study/Code/Database/Database/cmake-build-debug/CMakeFiles/Database.dir
 D:/Study/Code/Database/Database/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Study/Code/Database/Database/cmake-build-debug/ast/CMakeFiles/ast.dir
+D:/Study/Code/Database/Database/cmake-build-debug/ast/CMakeFiles/edit_cache.dir
+D:/Study/Code/Database/Database/cmake-build-debug/ast/CMakeFiles/rebuild_cache.dir
+D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/parser.dir
+D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/edit_cache.dir
+D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/rebuild_cache.dir
+D:/Study/Code/Database/Database/cmake-build-debug/inputBuffer/CMakeFiles/inputBuffer.dir
+D:/Study/Code/Database/Database/cmake-build-debug/inputBuffer/CMakeFiles/edit_cache.dir
+D:/Study/Code/Database/Database/cmake-build-debug/inputBuffer/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../ast/include/SQLValue.h
+string
+-
+variant
+-
+Token.h
+../ast/include/Token.h
+
+../parser/include/Token.h
+iostream
+-
+TokenType.h
+../parser/include/TokenType.h
+
+../parser/include/TokenType.h
+
+D:/Study/Code/Database/Database/ast/src/SQLValue.cpp
+SQLValue.h
+D:/Study/Code/Database/Database/ast/src/SQLValue.h
+Token.h
+D:/Study/Code/Database/Database/ast/src/Token.h
+TokenType.h
+D:/Study/Code/Database/Database/ast/src/TokenType.h
+

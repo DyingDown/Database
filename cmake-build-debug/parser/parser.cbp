@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="parser"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\ast\;CMake Files\parser\;CMake Files\inputBuffer\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Study/Code/Database/Database/cmake-build-debug/parser"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="parser">
+				<Option output="D:/Study/Code/Database/Database/cmake-build-debug/parser/libparser.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Study/Code/Database/Database/cmake-build-debug/parser"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Study/Code/Database/Database/include"/>
+					<Add directory="D:/Study/Code/Database/Database/parser/include"/>
+					<Add directory="D:/Study/Code/Database/Database/ast/include"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 parser"/>
+					<CompileFile command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="parser/fast">
+				<Option output="D:/Study/Code/Database/Database/cmake-build-debug/parser/libparser.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Study/Code/Database/Database/cmake-build-debug/parser"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Study/Code/Database/Database/include"/>
+					<Add directory="D:/Study/Code/Database/Database/parser/include"/>
+					<Add directory="D:/Study/Code/Database/Database/ast/include"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 parser/fast"/>
+					<CompileFile command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/Study/Code/Database/Database/cmake-build-debug/parser/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Study/Code/Database/Database/parser/src/LexicalAnalyzer.cpp">
+			<Option target="parser"/>
+		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/parser/src/Parser.cpp">
+			<Option target="parser"/>
+		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/parser/src/Token.cpp">
+			<Option target="parser"/>
+		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/parser/src/TokenType.cpp">
+			<Option target="parser"/>
+		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/ast/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ast\"/>
+		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/parser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\parser\"/>
+		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/inputBuffer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\inputBuffer\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

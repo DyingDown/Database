@@ -7,11 +7,10 @@ int main() {
     InputBuffer a = InputBuffer();
     a.read_input();
     LexicalAnalyzer b = LexicalAnalyzer(a.input_buffer);
-    Token t = b.scanNextTokens();
-    while(t.type != TokenType::END) {
-        std::cout << t.value<< " " << t.type << std::endl;
-        t = b.scanNextTokens();
+//    Token t = b.scanNextTokens();
+    for(auto i : b.Tokens) {
+        std::cout << i.value<< " " << i.type << std::endl;
     }
-    std::cout << t.value << std::endl;
+//    std::cout << t.value << std::endl;
     return 0;
 }

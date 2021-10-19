@@ -1,1 +1,1 @@
--lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ ast/libast.a parser/libparser.a inputBuffer/libinputBuffer.a ast/libast.a parser/libparser.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

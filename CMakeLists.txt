@@ -1,7 +1,19 @@
 cmake_minimum_required(VERSION 3.14)
 project(Database)
 
-set(CMAKE_CXX_STANDARD 14)
+# set cmake version
+set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Database main.cpp InputBuffer.cpp InputBuffer.h LexicalAnalyzer.cpp LexicalAnalyzer.h Token.cpp Token.h TokenType.cpp TokenType.h test_texicalAnalyzer.cpp)
-add_executable(test_texicalAnalyzer test_texicalAnalyzer.cpp)
+# specify directory for all .h file
+include_directories("${PROJECT_SOURCE_DIR}/include")
+
+# add sub project
+add_subdirectory(ast)
+add_subdirectory(parser)
+add_subdirectory(inputBuffer)
+
+add_executable(Database main.cpp)
+
+# add sub project's target libraries
+target_link_libraries(Database Database::ast Database::parser Database::inputBuffer)
+

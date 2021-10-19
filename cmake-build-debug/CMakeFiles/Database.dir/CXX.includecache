@@ -6,13 +6,33 @@
 
 #IncludeRegexTransform: 
 
-D:/Study/Code/Database/Database/InputBuffer.cpp
-InputBuffer.h
-D:/Study/Code/Database/Database/InputBuffer.h
-iostream
--
-
-D:/Study/Code/Database/Database/InputBuffer.h
+../inputBuffer/include/InputBuffer.h
 string
 -
+
+../parser/include/LexicalAnalyzer.h
+string
+-
+vector
+-
+Token.h
+../parser/include/Token.h
+TokenType.h
+../parser/include/TokenType.h
+
+../parser/include/Token.h
+iostream
+-
+TokenType.h
+../parser/include/TokenType.h
+
+../parser/include/TokenType.h
+
+D:/Study/Code/Database/Database/main.cpp
+iostream
+-
+InputBuffer.h
+D:/Study/Code/Database/Database/InputBuffer.h
+LexicalAnalyzer.h
+D:/Study/Code/Database/Database/LexicalAnalyzer.h
 
