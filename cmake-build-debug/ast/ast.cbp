@@ -5,7 +5,7 @@
 		<Option title="ast"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\ast\;CMake Files\parser\;CMake Files\inputBuffer\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\ast\;CMake Files\parser\;CMake Files\inputBuffer\;CMake Files\test\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="D:/Study/Code/Database/Database/cmake-build-debug/ast"/>
@@ -24,6 +24,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DDEBUG"/>
 					<Add directory="D:/Study/Code/Database/Database/include"/>
 					<Add directory="D:/Study/Code/Database/Database/ast/include"/>
 					<Add directory="D:/Study/Code/Database/Database/parser/include"/>
@@ -48,6 +49,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DDEBUG"/>
 					<Add directory="D:/Study/Code/Database/Database/include"/>
 					<Add directory="D:/Study/Code/Database/Database/ast/include"/>
 					<Add directory="D:/Study/Code/Database/Database/parser/include"/>
@@ -113,6 +115,9 @@
 		</Unit>
 		<Unit filename="D:/Study/Code/Database/Database/inputBuffer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\inputBuffer\"/>
+		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

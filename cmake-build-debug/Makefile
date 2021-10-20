@@ -84,6 +84,16 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	"D:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\ctest.exe" --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles D:\Study\Code\Database\Database\cmake-build-debug\\CMakeFiles\progress.marks
@@ -167,6 +177,19 @@ inputBuffer/fast:
 	$(MAKE) $(MAKESILENT) -f inputBuffer\CMakeFiles\inputBuffer.dir\build.make inputBuffer/CMakeFiles/inputBuffer.dir/build
 .PHONY : inputBuffer/fast
 
+#=============================================================================
+# Target rules for targets named database_test
+
+# Build rule for target.
+database_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 database_test
+.PHONY : database_test
+
+# fast build rule for target.
+database_test/fast:
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\database_test.dir\build.make test/CMakeFiles/database_test.dir/build
+.PHONY : database_test/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -199,8 +222,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... Database
 	@echo ... ast
+	@echo ... database_test
 	@echo ... inputBuffer
 	@echo ... parser
 	@echo ... main.obj

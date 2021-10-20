@@ -22,6 +22,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Program Files/JetBrains/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Compiler/GNU-C.cmake"
   "D:/Program Files/JetBrains/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Compiler/GNU-CXX.cmake"
   "D:/Program Files/JetBrains/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Compiler/GNU.cmake"
+  "D:/Program Files/JetBrains/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/GoogleTest.cmake"
   "D:/Program Files/JetBrains/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "D:/Program Files/JetBrains/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU-C.cmake"
   "D:/Program Files/JetBrains/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
@@ -39,6 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.20.2/CMakeSystem.cmake"
   "../inputBuffer/CMakeLists.txt"
   "../parser/CMakeLists.txt"
+  "../test/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -53,6 +55,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ast/CMakeFiles/CMakeDirectoryInformation.cmake"
   "parser/CMakeFiles/CMakeDirectoryInformation.cmake"
   "inputBuffer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -61,4 +64,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "ast/CMakeFiles/ast.dir/DependInfo.cmake"
   "parser/CMakeFiles/parser.dir/DependInfo.cmake"
   "inputBuffer/CMakeFiles/inputBuffer.dir/DependInfo.cmake"
+  "test/CMakeFiles/database_test.dir/DependInfo.cmake"
   )

@@ -6,13 +6,3 @@
 
 #IncludeRegexTransform: 
 
-D:/Study/Code/Database/Database/inputBuffer/include/InputBuffer.h
-string
--
-
-D:/Study/Code/Database/Database/inputBuffer/src/InputBuffer.cpp
-../include/InputBuffer.h
-D:/Study/Code/Database/Database/inputBuffer/include/InputBuffer.h
-iostream
--
-
