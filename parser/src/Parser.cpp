@@ -6,11 +6,11 @@
 
 #include <utility>
 #include "../include/Token.h"
-#include "../include/LexicalAnalyzer.h"
+#include "../include/Tokenizer.h"
 #include "../include/TokenType.h"
 
 Parser::Parser(std::string sql_stm) {
-    Lex = LexicalAnalyzer(std::move(sql_stm));
+    Lex = Tokenizer(std::move(sql_stm));
 }
 
 bool Parser::Match(int targetType) {

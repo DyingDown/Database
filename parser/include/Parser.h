@@ -5,7 +5,7 @@
 #ifndef DATABASE_PARSER_H
 #define DATABASE_PARSER_H
 
-#include "LexicalAnalyzer.h"
+#include "Tokenizer.h"
 #include "SQLCreateTableStatement.h"
 #include "SQLDeleteStatement.h"
 #include "SQLDropTableStatement.h"
@@ -16,7 +16,7 @@
 
 class Parser {
 private:
-    LexicalAnalyzer Lex;
+    Tokenizer Lex;
     bool Match(int targetType);
     SQLColumnDefine getColumnDefine();
     SQLExpression getExpressions();

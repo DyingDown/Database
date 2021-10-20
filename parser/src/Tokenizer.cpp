@@ -2,28 +2,28 @@
 // Created by o_oyao on 2021/9/23.
 //
 
-#include "../include/LexicalAnalyzer.h"
+#include "../include/Tokenizer.h"
 
 #include <utility>
 #include <iostream>
 #include <cctype>
 #include <algorithm>
 
-LexicalAnalyzer::LexicalAnalyzer(std::string content) {
+Tokenizer::Tokenizer(std::string content) {
     sql_str = std::move(content);
     currentPosition = 0;
     sql_len = sql_str.length();
     getAllTokens();
     currentTokenPos = 0;
 }
-LexicalAnalyzer::LexicalAnalyzer() {
+Tokenizer::Tokenizer() {
     sql_str = "";
     currentPosition = 0;
     sql_len = 0;
     currentTokenPos = 0;
 }
 
-Token LexicalAnalyzer::scanNextTokens() {
+Token Tokenizer::scanNextTokens() {
     while(currentPosition < sql_len and isSpace(sql_str[currentPosition])) {
         currentPosition ++;
     }
@@ -42,7 +42,7 @@ Token LexicalAnalyzer::scanNextTokens() {
     return currentToken;
 }
 
-Token LexicalAnalyzer::getNumber() {
+Token Tokenizer::getNumber() {
     std::string number;
     int dot = 0;
     char currentChar = sql_str[currentPosition];
@@ -68,7 +68,7 @@ Token LexicalAnalyzer::getNumber() {
     }
 }
 
-Token LexicalAnalyzer::getWords() {
+Token Tokenizer::getWords() {
     std::string str;
     int illegalCharNum = 0;
     while((std::isalpha(sql_str[currentPosition]) or sql_str[currentPosition] == '_') and currentPosition < sql_len) {
@@ -182,7 +182,7 @@ Token LexicalAnalyzer::getWords() {
     return {type, str};
 }
 
-Token LexicalAnalyzer::getString() {
+Token Tokenizer::getString() {
     std::string str;
     while(currentPosition < sql_len and sql_str[currentPosition] != '\"') {
         str += sql_str[currentPosition];
@@ -194,7 +194,7 @@ Token LexicalAnalyzer::getString() {
     return {TokenType::ILLEGAL, str};
 }
 
-Token LexicalAnalyzer::getPunct() {
+Token Tokenizer::getPunct() {
     std::string str;
     TokenType::TokenTypes type;
     while(std::ispunct(sql_str[currentPosition]) and currentPosition < sql_len) {
@@ -240,11 +240,11 @@ Token LexicalAnalyzer::getPunct() {
     return {type, str};
 }
 
-bool LexicalAnalyzer::isSpace(char a) {
+bool Tokenizer::isSpace(char a) {
     return a == '\n' or a == '\t' or a == ' ';
 }
 
-void LexicalAnalyzer::getAllTokens() {
+void Tokenizer::getAllTokens() {
     while(true) {
         this->Tokens.push_back(scanNextTokens());
         if(Tokens.back().type == TokenType::END) {
@@ -253,7 +253,7 @@ void LexicalAnalyzer::getAllTokens() {
     }
 }
 
-Token LexicalAnalyzer::getNextToken() {
+Token Tokenizer::getNextToken() {
     if(currentTokenPos < Tokens.size()) {
         return Tokens[currentPosition ++];
     } else {
@@ -261,7 +261,7 @@ Token LexicalAnalyzer::getNextToken() {
     }
 }
 
-Token LexicalAnalyzer::getCurrentToken() {
+Token Tokenizer::getCurrentToken() {
     if(currentTokenPos < Tokens.size()) {
         return Tokens[currentPosition];
     } else {

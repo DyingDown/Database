@@ -2,15 +2,15 @@
 // Created by o_oyao on 2021/9/23.
 //
 
-#ifndef DATABASE_LEXICALANALYZER_H
-#define DATABASE_LEXICALANALYZER_H
+#ifndef DATABASE_TOKENIZER_H
+#define DATABASE_TOKENIZER_H
 
 #include <string>
 #include <vector>
 #include "Token.h"
 #include "TokenType.h"
 
-class LexicalAnalyzer {
+class Tokenizer {
 private:
     Token getNumber();    /* get int or float numbers or dot */
     Token getWords();     /* get ID or */
@@ -23,8 +23,8 @@ private:
 public:
     std::string sql_str;
     int sql_len;
-    LexicalAnalyzer(std::string content);
-    LexicalAnalyzer();
+    Tokenizer(std::string content);
+    Tokenizer();
     void getAllTokens();
     Token getNextToken();
     Token getCurrentToken();
@@ -32,4 +32,4 @@ public:
 };
 
 
-#endif //DATABASE_LEXICALANALYZER_H
+#endif //DATABASE_TOKENIZER_H
