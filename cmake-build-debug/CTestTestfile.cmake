@@ -7,4 +7,5 @@
 subdirs("ast")
 subdirs("parser")
 subdirs("inputBuffer")
+subdirs("Storage")
 subdirs("test")

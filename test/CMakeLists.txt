@@ -16,10 +16,9 @@ target_include_directories(database_test PRIVATE
 target_link_libraries(database_test PRIVATE
         gtest
         gtest_main
-        spdlog
         Database::inputBuffer
         Database::parser
-        # minidb::ast
+        Database::ast
         )
 
-gtest_discover_tests(database_test)
+#gtest_discover_tests(database_test)

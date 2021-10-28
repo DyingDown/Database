@@ -65,24 +65,10 @@ include parser/CMakeFiles/parser.dir/progress.make
 # Include the compile flags for this target's objects.
 include parser/CMakeFiles/parser.dir/flags.make
 
-parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj: parser/CMakeFiles/parser.dir/flags.make
-parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj: parser/CMakeFiles/parser.dir/includes_CXX.rsp
-parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj: ../parser/src/LexicalAnalyzer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj"
-	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\parser.dir\src\LexicalAnalyzer.cpp.obj -c D:\Study\Code\Database\Database\parser\src\LexicalAnalyzer.cpp
-
-parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.i"
-	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Study\Code\Database\Database\parser\src\LexicalAnalyzer.cpp > CMakeFiles\parser.dir\src\LexicalAnalyzer.cpp.i
-
-parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.s"
-	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Study\Code\Database\Database\parser\src\LexicalAnalyzer.cpp -o CMakeFiles\parser.dir\src\LexicalAnalyzer.cpp.s
-
 parser/CMakeFiles/parser.dir/src/Parser.cpp.obj: parser/CMakeFiles/parser.dir/flags.make
 parser/CMakeFiles/parser.dir/src/Parser.cpp.obj: parser/CMakeFiles/parser.dir/includes_CXX.rsp
 parser/CMakeFiles/parser.dir/src/Parser.cpp.obj: ../parser/src/Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object parser/CMakeFiles/parser.dir/src/Parser.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object parser/CMakeFiles/parser.dir/src/Parser.cpp.obj"
 	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\parser.dir\src\Parser.cpp.obj -c D:\Study\Code\Database\Database\parser\src\Parser.cpp
 
 parser/CMakeFiles/parser.dir/src/Parser.cpp.i: cmake_force
@@ -96,7 +82,7 @@ parser/CMakeFiles/parser.dir/src/Parser.cpp.s: cmake_force
 parser/CMakeFiles/parser.dir/src/Token.cpp.obj: parser/CMakeFiles/parser.dir/flags.make
 parser/CMakeFiles/parser.dir/src/Token.cpp.obj: parser/CMakeFiles/parser.dir/includes_CXX.rsp
 parser/CMakeFiles/parser.dir/src/Token.cpp.obj: ../parser/src/Token.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object parser/CMakeFiles/parser.dir/src/Token.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object parser/CMakeFiles/parser.dir/src/Token.cpp.obj"
 	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\parser.dir\src\Token.cpp.obj -c D:\Study\Code\Database\Database\parser\src\Token.cpp
 
 parser/CMakeFiles/parser.dir/src/Token.cpp.i: cmake_force
@@ -110,7 +96,7 @@ parser/CMakeFiles/parser.dir/src/Token.cpp.s: cmake_force
 parser/CMakeFiles/parser.dir/src/TokenType.cpp.obj: parser/CMakeFiles/parser.dir/flags.make
 parser/CMakeFiles/parser.dir/src/TokenType.cpp.obj: parser/CMakeFiles/parser.dir/includes_CXX.rsp
 parser/CMakeFiles/parser.dir/src/TokenType.cpp.obj: ../parser/src/TokenType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object parser/CMakeFiles/parser.dir/src/TokenType.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object parser/CMakeFiles/parser.dir/src/TokenType.cpp.obj"
 	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\parser.dir\src\TokenType.cpp.obj -c D:\Study\Code\Database\Database\parser\src\TokenType.cpp
 
 parser/CMakeFiles/parser.dir/src/TokenType.cpp.i: cmake_force
@@ -121,20 +107,34 @@ parser/CMakeFiles/parser.dir/src/TokenType.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/src/TokenType.cpp.s"
 	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Study\Code\Database\Database\parser\src\TokenType.cpp -o CMakeFiles\parser.dir\src\TokenType.cpp.s
 
+parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.obj: parser/CMakeFiles/parser.dir/flags.make
+parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.obj: parser/CMakeFiles/parser.dir/includes_CXX.rsp
+parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.obj: ../parser/src/Tokenizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.obj"
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\parser.dir\src\Tokenizer.cpp.obj -c D:\Study\Code\Database\Database\parser\src\Tokenizer.cpp
+
+parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/src/Tokenizer.cpp.i"
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Study\Code\Database\Database\parser\src\Tokenizer.cpp > CMakeFiles\parser.dir\src\Tokenizer.cpp.i
+
+parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/src/Tokenizer.cpp.s"
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug\parser && "D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Study\Code\Database\Database\parser\src\Tokenizer.cpp -o CMakeFiles\parser.dir\src\Tokenizer.cpp.s
+
 # Object files for target parser
 parser_OBJECTS = \
-"CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj" \
 "CMakeFiles/parser.dir/src/Parser.cpp.obj" \
 "CMakeFiles/parser.dir/src/Token.cpp.obj" \
-"CMakeFiles/parser.dir/src/TokenType.cpp.obj"
+"CMakeFiles/parser.dir/src/TokenType.cpp.obj" \
+"CMakeFiles/parser.dir/src/Tokenizer.cpp.obj"
 
 # External object files for target parser
 parser_EXTERNAL_OBJECTS =
 
-parser/libparser.a: parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj
 parser/libparser.a: parser/CMakeFiles/parser.dir/src/Parser.cpp.obj
 parser/libparser.a: parser/CMakeFiles/parser.dir/src/Token.cpp.obj
 parser/libparser.a: parser/CMakeFiles/parser.dir/src/TokenType.cpp.obj
+parser/libparser.a: parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.obj
 parser/libparser.a: parser/CMakeFiles/parser.dir/build.make
 parser/libparser.a: parser/CMakeFiles/parser.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Study\Code\Database\Database\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libparser.a"

@@ -23,6 +23,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../inputBuffer/include"
   "../parser/include"
   "../ast/include"
+  "_deps/googletest-src/googletest/include"
+  "_deps/googletest-src/googletest"
   )
 
 # The set of dependency files which are needed:
@@ -31,6 +33,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "D:/Study/Code/Database/Database/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "D:/Study/Code/Database/Database/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "D:/Study/Code/Database/Database/cmake-build-debug/inputBuffer/CMakeFiles/inputBuffer.dir/DependInfo.cmake"
   "D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/parser.dir/DependInfo.cmake"
   "D:/Study/Code/Database/Database/cmake-build-debug/ast/CMakeFiles/ast.dir/DependInfo.cmake"

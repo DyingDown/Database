@@ -18,11 +18,16 @@ include_directories("${PROJECT_SOURCE_DIR}/include")
 add_subdirectory(ast)
 add_subdirectory(parser)
 add_subdirectory(inputBuffer)
+add_subdirectory(storage)
 
 add_executable(Database main.cpp)
 
 # add sub project's target libraries
-target_link_libraries(Database Database::ast Database::parser Database::inputBuffer)
+target_link_libraries(Database
+        Database::ast
+        Database::parser
+        Database::inputBuffer
+        Database::storage)
 
 option(PACKAGE_TESTS "Build the tests" ON)
 if(PACKAGE_TESTS)

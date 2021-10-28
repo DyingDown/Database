@@ -6,3 +6,33 @@
 
 #IncludeRegexTransform: 
 
+D:/Study/Code/Database/Database/parser/include/Token.h
+iostream
+-
+TokenType.h
+D:/Study/Code/Database/Database/parser/include/TokenType.h
+
+D:/Study/Code/Database/Database/parser/include/TokenType.h
+
+D:/Study/Code/Database/Database/parser/include/Tokenizer.h
+string
+-
+vector
+-
+Token.h
+D:/Study/Code/Database/Database/parser/include/Token.h
+TokenType.h
+D:/Study/Code/Database/Database/parser/include/TokenType.h
+
+D:/Study/Code/Database/Database/parser/src/Tokenizer.cpp
+../include/Tokenizer.h
+D:/Study/Code/Database/Database/parser/include/Tokenizer.h
+utility
+-
+iostream
+-
+cctype
+-
+algorithm
+-
+

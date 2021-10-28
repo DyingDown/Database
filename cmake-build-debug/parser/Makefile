@@ -84,6 +84,30 @@ test:
 test/fast: test
 .PHONY : test/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"D:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"D:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"D:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"D:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -93,6 +117,27 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"D:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"D:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -138,30 +183,6 @@ parser: parser/CMakeFiles/parser.dir/rule
 parser/fast:
 	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f parser\CMakeFiles\parser.dir\build.make parser/CMakeFiles/parser.dir/build
 .PHONY : parser/fast
-
-src/LexicalAnalyzer.obj: src/LexicalAnalyzer.cpp.obj
-.PHONY : src/LexicalAnalyzer.obj
-
-# target to build an object file
-src/LexicalAnalyzer.cpp.obj:
-	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f parser\CMakeFiles\parser.dir\build.make parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj
-.PHONY : src/LexicalAnalyzer.cpp.obj
-
-src/LexicalAnalyzer.i: src/LexicalAnalyzer.cpp.i
-.PHONY : src/LexicalAnalyzer.i
-
-# target to preprocess a source file
-src/LexicalAnalyzer.cpp.i:
-	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f parser\CMakeFiles\parser.dir\build.make parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.i
-.PHONY : src/LexicalAnalyzer.cpp.i
-
-src/LexicalAnalyzer.s: src/LexicalAnalyzer.cpp.s
-.PHONY : src/LexicalAnalyzer.s
-
-# target to generate assembly for a file
-src/LexicalAnalyzer.cpp.s:
-	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f parser\CMakeFiles\parser.dir\build.make parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.s
-.PHONY : src/LexicalAnalyzer.cpp.s
 
 src/Parser.obj: src/Parser.cpp.obj
 .PHONY : src/Parser.obj
@@ -235,6 +256,30 @@ src/TokenType.cpp.s:
 	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f parser\CMakeFiles\parser.dir\build.make parser/CMakeFiles/parser.dir/src/TokenType.cpp.s
 .PHONY : src/TokenType.cpp.s
 
+src/Tokenizer.obj: src/Tokenizer.cpp.obj
+.PHONY : src/Tokenizer.obj
+
+# target to build an object file
+src/Tokenizer.cpp.obj:
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f parser\CMakeFiles\parser.dir\build.make parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.obj
+.PHONY : src/Tokenizer.cpp.obj
+
+src/Tokenizer.i: src/Tokenizer.cpp.i
+.PHONY : src/Tokenizer.i
+
+# target to preprocess a source file
+src/Tokenizer.cpp.i:
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f parser\CMakeFiles\parser.dir\build.make parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.i
+.PHONY : src/Tokenizer.cpp.i
+
+src/Tokenizer.s: src/Tokenizer.cpp.s
+.PHONY : src/Tokenizer.s
+
+# target to generate assembly for a file
+src/Tokenizer.cpp.s:
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f parser\CMakeFiles\parser.dir\build.make parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.s
+.PHONY : src/Tokenizer.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -242,12 +287,13 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... parser
-	@echo ... src/LexicalAnalyzer.obj
-	@echo ... src/LexicalAnalyzer.i
-	@echo ... src/LexicalAnalyzer.s
 	@echo ... src/Parser.obj
 	@echo ... src/Parser.i
 	@echo ... src/Parser.s
@@ -257,6 +303,9 @@ help:
 	@echo ... src/TokenType.obj
 	@echo ... src/TokenType.i
 	@echo ... src/TokenType.s
+	@echo ... src/Tokenizer.obj
+	@echo ... src/Tokenizer.i
+	@echo ... src/Tokenizer.s
 .PHONY : help
 
 

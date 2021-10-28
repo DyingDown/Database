@@ -91,6 +91,7 @@ Database.exe: CMakeFiles/Database.dir/build.make
 Database.exe: ast/libast.a
 Database.exe: parser/libparser.a
 Database.exe: inputBuffer/libinputBuffer.a
+Database.exe: Storage/libstorage.a
 Database.exe: ast/libast.a
 Database.exe: parser/libparser.a
 Database.exe: CMakeFiles/Database.dir/linklibs.rsp

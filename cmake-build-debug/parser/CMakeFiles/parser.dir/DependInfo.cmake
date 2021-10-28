@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Study/Code/Database/Database/parser/src/LexicalAnalyzer.cpp" "D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj"
   "D:/Study/Code/Database/Database/parser/src/Parser.cpp" "D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/parser.dir/src/Parser.cpp.obj"
   "D:/Study/Code/Database/Database/parser/src/Token.cpp" "D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/parser.dir/src/Token.cpp.obj"
   "D:/Study/Code/Database/Database/parser/src/TokenType.cpp" "D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/parser.dir/src/TokenType.cpp.obj"
+  "D:/Study/Code/Database/Database/parser/src/Tokenizer.cpp" "D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/parser.dir/src/Tokenizer.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

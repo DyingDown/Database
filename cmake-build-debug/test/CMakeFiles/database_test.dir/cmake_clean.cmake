@@ -3,7 +3,6 @@ file(REMOVE_RECURSE
   "database_test.exe"
   "database_test.exe.manifest"
   "database_test.pdb"
-  "database_test[1]_tests.cmake"
   "libdatabase_test.dll.a"
 )
 

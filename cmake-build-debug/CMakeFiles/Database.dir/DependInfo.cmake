@@ -23,6 +23,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../ast/include"
   "../parser/include"
   "../inputBuffer/include"
+  "../storage/include"
   )
 
 # The set of dependency files which are needed:
@@ -34,6 +35,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "D:/Study/Code/Database/Database/cmake-build-debug/ast/CMakeFiles/ast.dir/DependInfo.cmake"
   "D:/Study/Code/Database/Database/cmake-build-debug/parser/CMakeFiles/parser.dir/DependInfo.cmake"
   "D:/Study/Code/Database/Database/cmake-build-debug/inputBuffer/CMakeFiles/inputBuffer.dir/DependInfo.cmake"
+  "D:/Study/Code/Database/Database/cmake-build-debug/Storage/CMakeFiles/storage.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

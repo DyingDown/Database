@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/parser.dir/src/LexicalAnalyzer.cpp.obj"
   "CMakeFiles/parser.dir/src/Parser.cpp.obj"
   "CMakeFiles/parser.dir/src/Token.cpp.obj"
   "CMakeFiles/parser.dir/src/TokenType.cpp.obj"
+  "CMakeFiles/parser.dir/src/Tokenizer.cpp.obj"
   "libparser.a"
   "libparser.pdb"
 )
