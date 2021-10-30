@@ -8,6 +8,8 @@
 #include <vector>
 #include "Pager.h"
 
+//class Pager;
+
 class BPlusTreeNode {
 private:
     static const int degree = 255;   // maxmiun number of keys in the node

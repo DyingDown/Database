@@ -96,19 +96,9 @@ Token.h
 string
 -
 
-../parser/include/LexicalAnalyzer.h
-string
--
-vector
--
-Token.h
-../parser/include/Token.h
-TokenType.h
-../parser/include/TokenType.h
-
 ../parser/include/Parser.h
-LexicalAnalyzer.h
-../parser/include/LexicalAnalyzer.h
+Tokenizer.h
+../parser/include/Tokenizer.h
 SQLCreateTableStatement.h
 ../parser/include/SQLCreateTableStatement.h
 SQLDeleteStatement.h
@@ -132,13 +122,23 @@ TokenType.h
 
 ../parser/include/TokenType.h
 
+../parser/include/Tokenizer.h
+string
+-
+vector
+-
+Token.h
+../parser/include/Token.h
+TokenType.h
+../parser/include/TokenType.h
+
 D:/Study/Code/Database/Database/main.cpp
 iostream
 -
 InputBuffer.h
 D:/Study/Code/Database/Database/InputBuffer.h
-LexicalAnalyzer.h
-D:/Study/Code/Database/Database/LexicalAnalyzer.h
+Tokenizer.h
+D:/Study/Code/Database/Database/Tokenizer.h
 Parser.h
 D:/Study/Code/Database/Database/Parser.h
 

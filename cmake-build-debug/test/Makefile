@@ -184,6 +184,30 @@ database_test/fast:
 	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\database_test.dir\build.make test/CMakeFiles/database_test.dir/build
 .PHONY : database_test/fast
 
+testLexer.obj: testLexer.cpp.obj
+.PHONY : testLexer.obj
+
+# target to build an object file
+testLexer.cpp.obj:
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\database_test.dir\build.make test/CMakeFiles/database_test.dir/testLexer.cpp.obj
+.PHONY : testLexer.cpp.obj
+
+testLexer.i: testLexer.cpp.i
+.PHONY : testLexer.i
+
+# target to preprocess a source file
+testLexer.cpp.i:
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\database_test.dir\build.make test/CMakeFiles/database_test.dir/testLexer.cpp.i
+.PHONY : testLexer.cpp.i
+
+testLexer.s: testLexer.cpp.s
+.PHONY : testLexer.s
+
+# target to generate assembly for a file
+testLexer.cpp.s:
+	cd /d D:\Study\Code\Database\Database\cmake-build-debug && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\database_test.dir\build.make test/CMakeFiles/database_test.dir/testLexer.cpp.s
+.PHONY : testLexer.cpp.s
+
 testmain.obj: testmain.cpp.obj
 .PHONY : testmain.obj
 
@@ -222,6 +246,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... database_test
+	@echo ... testLexer.obj
+	@echo ... testLexer.i
+	@echo ... testLexer.s
 	@echo ... testmain.obj
 	@echo ... testmain.i
 	@echo ... testmain.s

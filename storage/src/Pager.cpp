@@ -11,9 +11,8 @@ Pager::Pager(const std::string& dir) {
         std::fstream newFile(dir);
         newFile.close();
         fileData.open(dir, std::ios::in | std::ios::out | std::ios::binary);
-    } else {
     }
-    getFileSize();
+//    getFileSize();
 }
 
 void Pager::getFileSize() {

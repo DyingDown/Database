@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/database_test.dir/testLexer.cpp.obj"
   "CMakeFiles/database_test.dir/testmain.cpp.obj"
   "database_test.exe"
   "database_test.exe.manifest"

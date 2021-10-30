@@ -15,8 +15,8 @@ CMakeFiles/Database.dir/main.cpp.obj
  ../ast/include/SQLUpdateStatement.h
  ../ast/include/SQLValue.h
  ../inputBuffer/include/InputBuffer.h
- ../parser/include/LexicalAnalyzer.h
  ../parser/include/Parser.h
  ../parser/include/Token.h
  ../parser/include/TokenType.h
+ ../parser/include/Tokenizer.h
  D:/Study/Code/Database/Database/main.cpp

@@ -683,6 +683,9 @@
 		<Unit filename="D:/Study/Code/Database/Database/storage/src/SQLData.cpp">
 			<Option target="storage"/>
 		</Unit>
+		<Unit filename="D:/Study/Code/Database/Database/test/testLexer.cpp">
+			<Option target="database_test"/>
+		</Unit>
 		<Unit filename="D:/Study/Code/Database/Database/test/testmain.cpp">
 			<Option target="database_test"/>
 		</Unit>

@@ -14,7 +14,12 @@ Parser::Parser(std::string sql_stm) {
 }
 
 bool Parser::Match(int targetType) {
-    if(Lex.getNextToken().type == targetType) return true;
+    std::cout << Lex.getCurrentToken().value << std::endl;
+    if(Lex.getNextToken().type == targetType) {
+        return true;
+    } else {
+        Lex.traceBack();
+    }
     return false;
 }
 
@@ -199,6 +204,7 @@ SQLSingleExpression Parser::getSingleExpression() {
 
 SQLValue Parser::getValue() {
     Token currentToken = Lex.getNextToken();
+//    std::cout << currentToken.value << std::endl;
     if(currentToken.type == TokenType::ID or
        currentToken.type == TokenType::STRING or
        currentToken.type == TokenType::INT or
@@ -225,6 +231,7 @@ TokenType::TokenTypes Parser::getLogicOp() {
     if(token.type == TokenType::AND or token.type == TokenType::OR) {
         return token.type;
     } else {
+        Lex.traceBack();
         return TokenType::ILLEGAL;
         throw "Not a valid Logic operator";
     }

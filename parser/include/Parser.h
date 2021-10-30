@@ -16,7 +16,6 @@
 
 class Parser {
 private:
-    Tokenizer Lex;
     bool Match(int targetType);
     SQLColumnDefine getColumnDefine();
     SQLExpression getExpressions();
@@ -27,6 +26,7 @@ private:
     SQLSelectListElement getSelectElement();
     SQLAssignStatement getAssigns();
 public:
+    Tokenizer Lex;
     Parser(std::string sql_statement);
     SQLCreateTableStatement CreateTable();
     SQLDeleteStatement DeleteRow();

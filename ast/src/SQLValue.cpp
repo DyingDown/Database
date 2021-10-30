@@ -33,3 +33,4 @@ double SQLValue::getFloat() {
 std::string SQLValue::getString() {
     return std::get<std::string>(value);
 }
+

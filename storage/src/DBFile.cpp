@@ -10,8 +10,8 @@ BPlusTree DBFile::generateTree() {
 
 }
 
-DBFile::DBFile(std::string fileName) {
-    pager = Pager(fileName);
+DBFile::DBFile(const std::string& fileName): pager(fileName) {
+//    this->pager = Pager(fileName);
     if(pager.fileLen == 0) {
         currentPos = 0;
         // mark db file symbol

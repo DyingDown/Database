@@ -19,11 +19,9 @@ public:
     types valueType;
     SQLValue() = default;
     SQLValue(Token val, types type = types::STRING);
-
     int getInt();
     double getFloat();
     std::string getString();
-
 };
 
 

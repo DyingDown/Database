@@ -14,7 +14,7 @@ class Tokenizer {
 private:
     Token getNumber();    /* get int or float numbers or dot */
     Token getWords();     /* get ID or */
-    Token getString();    /* get string */
+    Token getString(char quotation);    /* get string */
     Token getPunct();     /* get punctuation */
     int currentPosition;
     bool isSpace(char a);
@@ -28,6 +28,7 @@ public:
     void getAllTokens();
     Token getNextToken();
     Token getCurrentToken();
+    void traceBack();
     std::vector<Token> Tokens;
 };
 

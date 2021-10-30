@@ -30,8 +30,8 @@ Token Tokenizer::scanNextTokens() {
     Token currentToken(TokenType::ILLEGAL, "");
     if(currentPosition >= sql_len) {
         currentToken = Token(TokenType::END, "");
-    } else if(sql_str[currentPosition] == '\"') {
-        currentToken = getString();
+    } else if(sql_str[currentPosition] == '\"' or sql_str[currentPosition] == '\'') {
+        currentToken = getString(sql_str[currentPosition]);
     } else if(isdigit(sql_str[currentPosition])) {
         currentToken = getNumber();
     } else if(isalpha(sql_str[currentPosition])) {
@@ -182,19 +182,21 @@ Token Tokenizer::getWords() {
     return {type, str};
 }
 
-Token Tokenizer::getString() {
+Token Tokenizer::getString(char quotation) {
     std::string str;
-    while(currentPosition < sql_len and sql_str[currentPosition] != '\"') {
+    currentPosition ++;
+    while(currentPosition < sql_len and sql_str[currentPosition] != quotation) {
         str += sql_str[currentPosition];
         currentPosition ++;
     }
-    if(currentPosition < sql_len and sql_str[currentPosition] == '\"') {
+    if(currentPosition < sql_len and sql_str[currentPosition] == quotation) {
+        currentPosition ++;
         return {TokenType::STRING, str};
     }
     return {TokenType::ILLEGAL, str};
 }
 
-Token Tokenizer::getPunct() {
+Token Tokenizer::getPunct()  {
     std::string str;
     TokenType::TokenTypes type;
     while(std::ispunct(sql_str[currentPosition]) and currentPosition < sql_len) {
@@ -202,7 +204,7 @@ Token Tokenizer::getPunct() {
         currentPosition ++;
         if(str == "+" or str == "-" or str == "*" or
            str == "/" or str == "," or str == ";" or
-           str == "(" or str == ")" or str == ">") break;
+           str == "(" or str == ")" ) break;
     }
     if(str == "+") {
         type = TokenType::PLUS;
@@ -255,7 +257,8 @@ void Tokenizer::getAllTokens() {
 
 Token Tokenizer::getNextToken() {
     if(currentTokenPos < Tokens.size()) {
-        return Tokens[currentPosition ++];
+        std::cout << Tokens[currentTokenPos].value << std::endl;
+        return Tokens[currentTokenPos ++];
     } else {
         return {TokenType::END, ""};
     }
@@ -263,10 +266,14 @@ Token Tokenizer::getNextToken() {
 
 Token Tokenizer::getCurrentToken() {
     if(currentTokenPos < Tokens.size()) {
-        return Tokens[currentPosition];
+        return Tokens[currentTokenPos];
     } else {
         return {TokenType::END, ""};
     }
+}
+
+void Tokenizer::traceBack() {
+    this->currentTokenPos --;
 }
 
 
