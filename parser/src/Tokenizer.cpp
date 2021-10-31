@@ -204,7 +204,7 @@ Token Tokenizer::getPunct()  {
         currentPosition ++;
         if(str == "+" or str == "-" or str == "*" or
            str == "/" or str == "," or str == ";" or
-           str == "(" or str == ")" ) break;
+           str == "(" or str == ")" or str == ".") break;
     }
     if(str == "+") {
         type = TokenType::PLUS;
@@ -236,6 +236,8 @@ Token Tokenizer::getPunct()  {
         type = TokenType::NOT_EQUAL;
     } else if (str == "<>") {
         type = TokenType::NOT_EQUAL;
+    } else if(str == "."){
+        type = TokenType::DOT;
     } else {
         type = TokenType::ILLEGAL;
     }
@@ -257,7 +259,6 @@ void Tokenizer::getAllTokens() {
 
 Token Tokenizer::getNextToken() {
     if(currentTokenPos < Tokens.size()) {
-        std::cout << Tokens[currentTokenPos].value << std::endl;
         return Tokens[currentTokenPos ++];
     } else {
         return {TokenType::END, ""};

@@ -34,6 +34,7 @@ public:
     SQLInsertStatement InsertRow();
     SQLSelectStatement Select();
     SQLUpdateStatement Update();
+
 };
 
 

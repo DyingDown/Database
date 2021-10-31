@@ -14,7 +14,7 @@ Parser::Parser(std::string sql_stm) {
 }
 
 bool Parser::Match(int targetType) {
-    std::cout << Lex.getCurrentToken().value << std::endl;
+//    std::cout << Lex.getCurrentToken().value << std::endl;
     if(Lex.getNextToken().type == targetType) {
         return true;
     } else {
@@ -93,18 +93,17 @@ SQLInsertStatement Parser::InsertRow() {
     if(Match(TokenType::INSERT) and Match(TokenType::INTO)) {
         if(Lex.getCurrentToken().type == TokenType::ID) {
             stmt.tableName = Lex.getNextToken().value;
-            if(!Match(TokenType::L_BRACKET)) {
-                throw "missing '('";
-            }
-            do {
-                if(Lex.getCurrentToken().type == TokenType::ID) {
-                    stmt.columnNames.push_back(Lex.getNextToken().value);
-                } else {
-                    throw "expeted a column name";
+            if(Match(TokenType::L_BRACKET)) {
+                do {
+                    if(Lex.getCurrentToken().type == TokenType::ID) {
+                        stmt.columnNames.push_back(Lex.getNextToken().value);
+                    } else {
+                        throw "expeted a column name";
+                    }
+                } while(Match(TokenType::COMMA));
+                if(!Match(TokenType::R_BRACKET)) {
+                    throw "missing ')'";
                 }
-            } while(Match(TokenType::COMMA));
-            if(!Match(TokenType::R_BRACKET)) {
-                throw "missing ')'";
             }
             if(!Match(TokenType::VALVUES)) {
                 throw "missing 'values'";
@@ -141,7 +140,7 @@ SQLSelectStatement Parser::Select() {
                 stmt.tableLists.push_back(Lex.getNextToken().value);
             }
         } while(Match(TokenType::COMMA));
-        if(Lex.getCurrentToken().type == TokenType::WHERE) {
+        if(Lex.getNextToken().type == TokenType::WHERE) {
             stmt.expr = getExpressions();
         }
     } else {
@@ -244,9 +243,28 @@ SQLSelectListElement Parser::getSelectElement() {
     if(token.type == TokenType::ASTERISK) {
         ele.columnName = '*';
     } else if(token.type == TokenType::ID){
-        ele.columnName = token.value;
+        Token dot = Lex.getNextToken();
+        if(dot.type == TokenType::DOT) {
+            Token t = Lex.getNextToken();
+            if(t.type == TokenType::ID) {
+                ele.tableName = token.value;
+                ele.columnName = t.value;
+            } else {
+                throw "missing column name";
+            }
+        } else {
+            Lex.traceBack();
+            ele.columnName = token.value;
+        }
+        if(Match(TokenType::AS)) {
+            if(Match(TokenType::ID)) {
+                ele.newColumnName = Lex.getCurrentToken().value;
+            } else {
+                throw "missing new column name";
+            }
+        }
     } else {
-        throw "expected a table name or '*'";
+        throw "expected a column name or '*'";
     }
     return ele;
 }

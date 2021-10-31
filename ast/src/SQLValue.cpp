@@ -34,3 +34,15 @@ std::string SQLValue::getString() {
     return std::get<std::string>(value);
 }
 
+void SQLValue::printValue() {
+    if(valueType == types::INT) {
+        std::cout << getInt() << std::endl;
+    } else if(valueType == types::COLUMN) {
+        std::cout << getString() << std::endl;
+    } else if(valueType == types::FLOAT) {
+        std::cout << getFloat() << std::endl;
+    } else if(valueType == types::STRING) {
+        std::cout << getString() << std::endl;
+    }
+}
+

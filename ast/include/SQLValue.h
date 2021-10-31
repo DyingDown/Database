@@ -22,6 +22,7 @@ public:
     int getInt();
     double getFloat();
     std::string getString();
+    void printValue();
 };
 
 
