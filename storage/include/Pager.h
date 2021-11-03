@@ -21,6 +21,7 @@ public:
     int read(int addr, char* data, int len);
     SQLData loadData(int addr);          /* load row data*/
     int writeData(SQLData data, int pos);
+    int applySpace();
 };
 
 

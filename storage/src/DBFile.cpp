@@ -40,3 +40,12 @@ DBFile::DBFile(const std::string& fileName): pager(fileName) {
         throw "not a complete db file";
     }
 }
+
+int DBFile::getBlockAddr() {
+    if(freeBlockNum == 0) {
+        return 0;
+    } else {
+
+    }
+    return 0;
+}

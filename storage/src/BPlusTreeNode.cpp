@@ -13,6 +13,15 @@ BPlusTreeNode::BPlusTreeNode(Pager& pager_) : pager(pager_){
     this->currentAddr = 0;
 }
 
+BPlusTreeNode::BPlusTreeNode(Pager &pager1, int parent, bool isLeaf, int num, int addr) : pager(pager1){
+    this->num = num;
+    this->keys = std::vector<int>(degree);
+    this->children = std::vector<int>(degree + 1);
+    this->parentNode = parent;
+    this->isLeaf = isLeaf;
+    this->currentAddr = addr;
+}
+
 void BPlusTreeNode::loadNode(int addr) {
     currentAddr = addr;
     // get keys
@@ -37,7 +46,7 @@ void BPlusTreeNode::loadNode(int addr) {
 }
 
 int BPlusTreeNode::findCertainKey(int key) {
-    int pos = std::lower_bound(keys.begin(), keys.end(), num) - keys.begin();
+    int pos = std::lower_bound(keys.begin(), keys.begin() + num, key) - keys.begin();
 //    if(keys[pos] == key) { // if data found
 //        return children[pos];
 //    }
@@ -49,4 +58,7 @@ int BPlusTreeNode::findAddrToInsert(int key) {
 
     return 0;
 }
+
+
+
 

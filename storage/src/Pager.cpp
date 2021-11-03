@@ -21,7 +21,8 @@ void Pager::getFileSize() {
 }
 
 int Pager::write(int addr, char* data, int len) {
-    fileData.seekg(addr, std::ios::beg);
+    if(addr == 0) fileData.seekg(0, std::ios::end);
+    else fileData.seekg(addr, std::ios::beg);
     int ad = fileData.tellg();
     fileData.write(data, len);
     getFileSize();
@@ -51,12 +52,19 @@ SQLData Pager::loadData(int addr) {
 }
 
 int Pager::writeData(SQLData data, int pos) {
-    fileData.seekg(0,std::ios::end);
+    fileData.seekp(0,std::ios::end);
     int ad = fileData.tellg();
     int len;
     fileData.write((char *) &data.size, sizeof(data.size));
     fileData.write((char *) &data.data, data.size);
     return ad;
+}
+
+int Pager::applySpace() {
+    fileData.seekp(0, std::ios::end);
+    int addr = fileData.tellp();
+    fileData.write(nullptr, 4096);
+    return addr;
 }
 
 

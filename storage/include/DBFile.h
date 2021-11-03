@@ -18,6 +18,9 @@ public:
     int tableNum;
     static const int pageSize;
     std::vector<BPlusTree> trees;
+    int freeBlockNum;
+    int firstFreeBlockAddr;
+    int getBlockAddr(); // get one free block's addres
 };
 
 

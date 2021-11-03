@@ -12,6 +12,7 @@ void testDropTable(std::string sql);
 void testInsert(std::string sql);
 void testSelect(std::string sql);
 void testUpdate(std::string sql);
+
 int main() {
     // input
     /* input test
